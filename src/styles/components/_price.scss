@@ -1,0 +1,161 @@
+.price {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&__container {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $medium) {
+			flex-direction: column;
+		}
+	}
+
+	&__content {
+		padding: 280px 0;
+		flex: 0 0 50%;
+
+		@media (max-width: $extraLarge) {
+			padding: 180px 0;
+		}
+
+		@media (max-width: $large) {
+			padding: 120px 0;
+		}
+
+		@media (max-width: $medium) {
+			padding: 40px 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		font-size: 50px;
+		letter-spacing: -1.5px;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 30px;
+			font-size: 40px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 20px;
+			font-size: 32px;
+		}
+	}
+
+	&__list {
+		margin-bottom: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		align-items: center;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 30px;
+			gap: 12px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 20px;
+			gap: 8px;
+		}
+	}
+
+	&__item {
+		border-radius: 24px;
+		padding: 8px 20px;
+		font-weight: 500;
+
+		&--pink {
+			border: 1px solid #FFD1CA;
+			background-color: #FFF1EF;
+			color: #FF8B7A;
+		}
+
+		&--yellow {
+			border: 1px solid #FFCA7A;
+			background-color: #FFF8EE;
+			color: #FFAC2F;
+		}
+
+		&--green {
+			border: 1px solid #98FAC0;
+			background-color: #ECFFF4;
+			color: #3ACD77;
+		}
+
+		&--turquoise {
+			border: 1px solid #6EE1E9;
+			background-color: #F1FEFF;
+			color: #2BC0CA;
+		}
+
+		&--violet {
+			border: 1px solid #EBBDFF;
+			background-color: #FCF5FF;
+			color: #C140FD;
+		}
+
+		@media (max-width: $extraLarge) {
+			padding: 6px 16px;
+			font-size: 16px;
+		}
+
+		@media (max-width: $large) {
+			padding: 4px 10px;
+			font-size: 14px;
+		}
+	}
+
+	&__block {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 50%;
+		background: #FFFBFA url("@icons/price.svg") 75% center / 75% no-repeat;
+
+		@media (max-width: $medium) {
+			position: relative;
+			padding: 120px 0;
+			left: 0;
+			width: 100%;
+			background-position: center;
+		}
+	}
+
+	&__cost {
+		margin-bottom: 16px;
+		font-weight: 700;
+		font-size: 120px;
+		line-height: 80%;
+		letter-spacing: -3.6px;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 12px;
+			font-size: 80px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 8px;
+			font-size: 56px;
+		}
+	}
+
+	&__descr {
+		font-weight: 600;
+
+		@media (max-width: $extraLarge) {
+			font-size: 14px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 10px;
+		}
+	}
+}

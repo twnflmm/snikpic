@@ -1,0 +1,153 @@
+* {
+  font-family: Poppins, sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  color: $primary;
+}
+
+input,
+textarea,
+button,
+select {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section {
+  position: relative;
+}
+
+picture {
+  height: 100%;
+
+  img {
+    display: flex;
+    align-items: end;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 20px;
+  z-index: 1000;
+
+  img {
+    margin-right: 16px;
+  }
+}
+
+.button {
+  border-radius: 15px;
+  padding: 14px 38px;
+  font-weight: 700;
+  color: $white;
+  background-color: $pink;
+  box-shadow: 0px 16px 40px 0px rgba(255, 188, 166, 0.33);
+
+  @media (max-width: $extraLarge) {
+    padding: 10px 27px;
+    font-size: 16px;
+  }
+
+  @media (max-width: $large) {
+    padding: 7px 19px;
+    font-size: 14px;
+  }
+}
+
+.select {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 187.5%;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 110%;
+  letter-spacing: -1.8px;
+  color: $primary;
+
+  span {
+    color: $pink;
+  }
+
+  @media (max-width: $extraLarge) {
+    font-size: 48px;
+  }
+
+  @media (max-width: $large) {
+    font-size: 36px;
+  }
+}
+
+.text {
+  font-size: 18px;
+  line-height: 180%;
+  color: $secondary;
+
+  @media (max-width: $extraLarge) {
+    font-size: 15px;
+  }
+
+  @media (max-width: $large) {
+    font-size: 13px;
+  }
+}

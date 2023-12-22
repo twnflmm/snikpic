@@ -1,0 +1,21 @@
+@function rem($size) {
+   $remSize: calc($size / 16px);
+   @return #{$remSize}rem;
+}
+
+$primary: #1D2736;
+$secondary: #677487;
+$slateGray: #717A90;
+$frenchGray: #BBC0C7;
+$brightGray: #3B434F;
+$pink: #F0998D;
+$bittersweet: #FD7461;
+$fantasy: #FDF9F8;
+$whiteLilac: #F9F7FC;
+$black: #000;
+$white: #fff;
+
+$extraLarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;

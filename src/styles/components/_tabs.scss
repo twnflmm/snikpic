@@ -1,0 +1,195 @@
+.tabs {
+	padding-top: 100px; //поменять
+	padding-bottom: 140px;
+	background-color: $fantasy;
+
+	&__list {
+		margin-bottom: 72px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 48px;
+		align-items: center;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 48px;
+			gap: 30px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 36px;
+			gap: 22px;
+		}
+	}
+
+	&__item-button {
+		position: relative;
+		font-weight: 500;
+		font-size: 24px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -8px;
+			width: 0;
+			height: 3px;
+			background-color: $pink;
+			transition: width .3s;
+		}
+
+		&.active::after {
+			width: 100%;
+			transition: width .3s;
+		}
+
+		@media (max-width: $extraLarge) {
+			font-size: 20px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 16px;
+		}
+	}
+
+	&__bottom-item {
+		display: none;
+		gap: 30px;
+		align-items: center;
+		justify-content: space-between;
+
+		&.active {
+			display: flex;
+		}
+
+		@media (max-width: $medium) {
+			flex-wrap: wrap;
+		}
+	}
+
+	@media (max-width: $extraLarge) {
+		padding: 80px 0;
+	}
+
+	@media (max-width: $large) {
+		padding: 60px 0;
+	}
+
+	@media (max-width: $medium) {
+		padding: 40px 0;
+	}
+}
+
+.tabs-item {
+	&__title {
+		margin-bottom: 24px;
+		max-width: 368px;
+		font-size: 46px;
+		letter-spacing: -1.38px;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 20px;
+			max-width: 290px;
+			font-size: 36px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 16px;
+			max-width: 220px;
+			font-size: 28px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 32px;
+		max-width: 370px;
+		color: $secondary;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 26px;
+			max-width: 260px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__replaces {
+		margin-bottom: 40px;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 30px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__image {
+		max-width: 586px;
+		max-height: 519px;
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width: $extraLarge) {
+			max-width: 480px;
+			max-height: 433px;
+		}
+	}
+}
+
+.replaces {
+	&__title {
+		margin-bottom: 8px;
+		font-size: 14px;
+		letter-spacing: 2.8px;
+		text-transform: uppercase;
+		color: $secondary;
+
+		@media (max-width: $extraLarge) {
+			font-size: 12px;
+			letter-spacing: 2.4px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 10px;
+			letter-spacing: 2px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		gap: 32px;
+		align-items: center;
+	}
+
+	&__item {
+		position: relative;
+		font-weight: 600;
+
+		&:not(:last-child)::after {
+			content: "";
+			position: absolute;
+			right: -16px;
+			top: 50%;
+			width: 1px;
+			height: 16px;
+			background-color: $primary;
+			opacity: 0.1;
+			transform: translateY(-50%);
+		}
+
+		@media (max-width: $extraLarge) {
+			font-size: 15px;
+		}
+
+		@media (max-width: $large) {
+			font-size: 12px;
+		}
+	}
+}

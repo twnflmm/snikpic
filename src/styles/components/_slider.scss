@@ -1,0 +1,178 @@
+.slider {
+	padding-top: 160px;
+	padding-bottom: 480px;
+	background-color: #FFFAFE;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__button-box {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		top: 50%;
+		max-width: 50px;
+		max-height: 50px;
+		z-index: 100;
+		transform: translateY(-50%);
+
+		&.swiper-button-disabled {
+
+			line,
+			circle {
+				stroke: #B8BCC1;
+			}
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width: $small) {
+			top: unset;
+			bottom: -20px;
+		}
+	}
+
+	&__prev {
+		left: 0;
+	}
+
+	&__next {
+		right: 0;
+	}
+
+	@media (max-width: $extraLarge) {
+		padding-top: 120px;
+		padding-bottom: 480px;
+	}
+
+	@media (max-width: $large) {
+		padding-top: 80px;
+		padding-bottom: 420px;
+	}
+
+	@media (max-width: $medium) {
+		padding-top: 40px;
+		padding-bottom: 400px;
+	}
+}
+
+.slide {
+	padding-left: 70px;
+	padding-right: 100px;
+	display: flex;
+	gap: 50px;
+	align-items: center;
+	justify-content: space-between;
+
+	&__image {
+		position: relative;
+		max-width: 310px;
+		max-height: 310px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__play {
+		position: absolute;
+		right: 10%;
+		bottom: 10%;
+		max-width: 100px;
+		max-height: 100px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (max-width: $extraLarge) {
+			max-width: 75px;
+			max-height: 75px;
+		}
+	}
+
+	&__content {
+		@media (max-width: $medium) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		font-weight: 600;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 16px;
+			font-size: 16px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 8px;
+			font-size: 14px;
+		}
+
+		@media (max-width: $medium) {
+			text-align: center;
+		}
+	}
+
+	&__text {
+		margin-bottom: 16px;
+		max-width: 603px;
+
+		@media (max-width: $extraLarge) {
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+
+		@media (max-width: $large) {
+			margin-bottom: 6px;
+			font-size: 14px;
+		}
+
+		@media (max-width: $medium) {
+			text-align: center;
+		}
+	}
+
+	&__decor {
+		width: 63px;
+		height: 64px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@media (max-width: $medium) {
+		padding: 0 75px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	@media (max-width: $small) {
+		padding: 0;
+	}
+}
